@@ -1,0 +1,516 @@
+:root {
+  --primary: #b6895b;
+  --background: #fff;
+  --clr: #010101;
+  --spn1: #b18201;
+  --spn2: #01dbeb;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "poppins", sans-serif;
+  background-color: var(--clr);
+  color: var(--background);
+}
+
+/* Navbar Start */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 7%;
+  background-color: rgb(1, 1, 1, 0.8);
+  border-bottom: 1px solid #a38c06;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99999;
+}
+
+/* nav-logo start */
+.logo-nav {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff;
+  font-style: italic;
+}
+
+.span_1 {
+  color: var(--primary);
+  font-style: normal;
+}
+
+.span_2 {
+  color: #a38c06;
+  font-style: normal;
+}
+/* nav-logo end */
+
+/* nav-a-start */
+.navbar-nav a {
+  color: var(--background);
+  display: inline-block;
+  font-size: 1.1rem;
+  margin: 0 1rem;
+}
+
+.navbar .navbar-nav a:hover {
+  color: var(--spn2);
+}
+
+/* psudo element start */
+.navbar .navbar-nav a::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--primary);
+  transform: scaleX(0);
+  transition: 0.2s linear;
+}
+
+.navbar .logo-nav a::after {
+  content: "";
+  position: relative;
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--primary);
+  transform: scaleX(0);
+  transition: 0.2s linear;
+}
+
+.navbar .navbar-nav a:hover::after {
+  transform: scaleX(0.5);
+}
+
+/* psudo element end */
+
+/* nav-a-end */
+
+/* navbar-icon-extr-Start */
+.navbar-icon-extr a {
+  color: var(--background);
+  margin: 0 0.5rem;
+}
+
+/* nav-ico-extr:hover start */
+.navbar-icon-extr a:hover {
+  color: #bdba21;
+}
+/* nav-ico-extr:hover end */
+/* ---------------------------------------- */
+
+/*====================list Menu hilang Ketika ganti display */
+/* nav-ico-extr #ham-menu start */
+#ham-menu {
+  display: none;
+}
+/* nav-ico-extr #ham-menu end */
+/* log start */
+/* #log {
+    display: none;
+  } */
+/* log end */
+/*====================list Menu hilang Ketika ganti display  */
+
+/* ------------------------------------------ */
+
+/* navbar-icon-extr-End */
+
+/* Navbar End */
+
+/*===============Hero Section Start====================*/
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-image: url(../assets/Img/hero.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 25%;
+  bottom: 0;
+  background: linear-gradient(
+    0deg,
+    rgba(1, 1, 3, 1) 8%,
+    rgba(230, 224, 224, 0) 50%
+  );
+}
+
+.hero .content {
+  padding: 1.3rem 7%;
+  max-width: 60rem;
+}
+
+.hero .content h1 {
+  color: #fff;
+  font-size: 3.7em;
+  line-height: 1.2;
+  text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+}
+
+.hero .content h1 .span_1 {
+  color: var(--spn1);
+}
+.hero .content h1 .span_2 {
+  color: var(--spn2);
+}
+
+.hero .content p {
+  font-size: 1.5rem;
+  color: #fff;
+  margin-top: 1.5rem;
+  line-height: 1.4;
+  font-weight: 200;
+  text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+  mix-blend-mode: difference;
+}
+
+.hero .content .cta {
+  display: inline-block;
+  margin-top: 1.5rem;
+  margin: 1rem 3rem;
+  font-size: 1.4rem;
+  color: #fff;
+  border: 2px solid var(--clr);
+  border-radius: 0.5rem;
+  padding: 1px 1%;
+}
+.hero .content .cta a {
+  color: #0a0a0a;
+  font-weight: 200;
+}
+.hero .content a:hover {
+  color: #d3be00;
+  text-shadow: 2px 1px #000000;
+  background-color: #49350079;
+}
+
+.hero .content a:hover::after {
+  transition: 1s linear;
+}
+/*===============Hero Section End======================*/
+
+/*===============Quotes Section Start======================*/
+.quotes,
+.products,
+.contact {
+  padding: 8rem 7% 1.4rem;
+}
+
+.quotes h2,
+.products h2,
+.contact h2 {
+  text-align: center;
+  font-size: 2.6rem;
+  margin-bottom: 3rem;
+}
+
+.quotes h2 span,
+.products h2 span,
+.contact h2 span {
+  color: var(--primary);
+}
+
+.quotes .row {
+  display: flex;
+}
+
+.quotes .row .quotes-img {
+  flex: 1 1 45rem;
+}
+.quotes .row .quotes-img img {
+  width: 100%;
+}
+.quotes .row .content {
+  flex: 1 1 35rem;
+  padding: 0 1rem;
+  list-style-type: none;
+}
+
+.quotes .row .content h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.quotes .row .content p {
+  margin-bottom: 0.8rem;
+  font-size: 1.4rem;
+  font-weight: 100;
+  line-height: 1.2;
+}
+
+/*===============Quotes Section End======================*/
+/*===============Products Section Start======================*/
+
+.products p,
+.contact p {
+  text-align: center;
+  max-width: 50rem;
+  margin: auto;
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+.products span {
+  color: var(--spn1);
+}
+.products .spn,
+.contact .spn {
+  color: var(--spn2);
+  font-weight: 800;
+}
+.products h2,
+.contact h2 {
+  margin-bottom: 1rem;
+}
+
+.products .row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.products .row .products-card {
+  text-align: center;
+  padding-top: 1.5rem;
+  padding-bottom: 3rem;
+}
+
+.products .row .products-card img {
+  width: 160px;
+  height: 160px;
+  margin-top: 1.8rem;
+  margin: 20px 35px;
+  border: 1px solid #01dbeb;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.products .row .products-card .products-card-title {
+  margin: 10px auto 0.5rem;
+}
+
+/*===============Products Section End======================*/
+/*===============Contact Section Start======================*/
+.contact .row {
+  display: flex;
+  margin-top: 2rem;
+  background-color: #222;
+}
+
+.contact .row .map {
+  flex: 1 1 45rem;
+  width: 100%;
+  object-fit: cover;
+}
+.contact .row form {
+  flex: 1 1 45rem;
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+.contact .row .input-group {
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+  background-color: var(--clr);
+  border: 1px solid #eee;
+  padding-left: 2rem;
+}
+
+.contact .row form .input-group input {
+  width: 100%;
+  padding: 1.5rem;
+  font-size: 1.7rem;
+  background: none;
+  color: #fff;
+}
+
+.contact .row form .btn {
+  margin: 1rem 3rem;
+  font-size: 1.7rem;
+  color: #fff;
+  border: 2px solid #1b1501;
+  background: var(--spn1);
+  cursor: pointer;
+}
+/*===============Contact Section End======================*/
+/*===============Footer Section Start======================*/
+footer {
+  background-color: #d3be00;
+  text-align: center;
+  padding: 1rem 0 3rem;
+  margin-top: 3rem;
+}
+
+footer .socials {
+  padding: 1rem 0;
+}
+
+footer .socials a {
+  color: #fff;
+  margin: 1rem;
+}
+
+footer .socials a:hover {
+  color: var(--clr);
+}
+footer .links {
+  margin-bottom: 1.4rem;
+}
+footer .links a {
+  color: #fff;
+  padding: 0.7rem 1rem;
+}
+
+footer .links a:hover {
+  color: var(--clr);
+}
+
+footer .credit {
+  font-size: 0.8rem;
+}
+
+footer .credit a {
+  color: #000000;
+  font-weight: 700;
+}
+/*===============Footer Section End======================*/
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+/*_____________Media Queries Start________________*/
+/*+++++++_Mode Laptop_Start_+++++++++*/
+@media (max-width: 1366px) {
+  html {
+    font-size: 75%;
+  }
+}
+/*+++++++_Mode Laptop_End_+++++++++*/
+/*  */
+/*  */
+/*+++++++_Mode Tablet_Start_+++++++++*/
+@media (max-width: 885px) {
+  html {
+    font-size: 64.5%;
+  }
+  /* #ham-menu */
+  #ham-menu {
+    display: inline-block;
+  }
+  /* 
+    #log {
+      display: none;
+    } */
+  .navbar .navbar-nav {
+    position: absolute;
+    top: 100%;
+    right: 100%;
+    background-color: #d3a40bd0;
+    width: 25rem;
+    height: 100vh;
+  }
+
+  /* menambahkan class active */
+  .navbar .navbar-nav.active {
+    right: 0;
+  }
+  /* menambahkan class active */
+  .navbar .navbar-nav a {
+    color: var(--clr);
+    display: block;
+    margin: 1.5rem;
+    padding: 0.8rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+
+  .navbar .navbar-nav a:hover::after {
+    transform-origin: 0 0;
+  }
+
+  .navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.3);
+  }
+
+  .hero .content p {
+    font-size: 1.5rem;
+    font-weight: 300;
+  }
+
+  .quotes .row {
+    flex-wrap: wrap;
+  }
+  .quotes .row .quotes-img img {
+    height: 24rem;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .quotes .row .content {
+    padding: 0;
+  }
+  .quotes .row .content h3 {
+    margin-top: 1rem;
+    font-size: 2rem;
+  }
+  .quotes .row .content p {
+    font-size: 1.6rem;
+  }
+
+  .products p {
+    font-size: 1.5rem;
+  }
+
+  .contact .row {
+    flex-wrap: wrap;
+  }
+
+  .contact .row .map {
+    height: 30rem;
+  }
+
+  .contact .row form {
+    padding-top: 0;
+  }
+  /* 
+    .lg a {
+      border: 5px solid #ffffff;
+      border-radius: 5px;
+      background-color: crimson;
+      padding: 2px 2px;
+      border-bottom: none;
+    } */
+}
+/*+++++++_Mode Tablet_End_+++++++++*/
+/*  */
+/*  */
+/*+++++++_Mode Mobile_Start_+++++++++*/
+@media (max-width: 450px) {
+  html {
+    font-size: 55%;
+  }
+}
+/*+++++++_Mode Mobile_End_+++++++++*/
+/*_____________Media Queries End____________________*/
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
