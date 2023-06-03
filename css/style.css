@@ -314,12 +314,14 @@ body {
 .contact .row {
   display: flex;
   margin-top: 2rem;
+  border-radius: 10px;
   background-color: #222;
 }
 
 .contact .row .map {
   flex: 1 1 45rem;
   width: 100%;
+  border-radius: 10px;
   object-fit: cover;
 }
 .contact .row form {
@@ -334,6 +336,7 @@ body {
   margin-top: 2rem;
   background-color: var(--clr);
   border: 1px solid #eee;
+  border-radius: 10px;
   padding-left: 2rem;
 }
 
@@ -350,6 +353,7 @@ body {
   font-size: 1.7rem;
   color: #fff;
   border: 2px solid #1b1501;
+  border-radius: 5px;
   background: var(--spn1);
   cursor: pointer;
 }
@@ -424,10 +428,11 @@ footer .credit a {
   .navbar .navbar-nav {
     position: absolute;
     top: 100%;
-    right: 100%;
+    right: -100%;
     background-color: #d3a40bd0;
     width: 25rem;
     height: 100vh;
+    transition: 0.3s;
   }
 
   /* menambahkan class active */
