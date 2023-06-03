@@ -133,7 +133,7 @@ body {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  background-image: url(../assets/Img/hero.jpg);
+  background-image: url(../Img/hero.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
