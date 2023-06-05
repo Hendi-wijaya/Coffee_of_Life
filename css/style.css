@@ -293,6 +293,7 @@ body {
   text-align: center;
   padding-top: 1.5rem;
   padding-bottom: 3rem;
+  overflow: hidden;
 }
 
 .products .row .products-card img {
@@ -302,9 +303,12 @@ body {
   margin: 20px 35px;
   border: 1px solid #01dbeb;
   border-radius: 50%;
+  transition: scale 400ms;   /*'menambakan transition pada img' */
   object-fit: cover;
 }
-
+.products .row .products-card img:hover{  /*'manmbahkan hover pada file img'*/
+  scale: 120%
+}
 .products .row .products-card .products-card-title {
   margin: 10px auto 0.5rem;
 }
